@@ -1,0 +1,69 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+// *{
+//     border: 1px solid red;
+// }
+
+.header {
+    // border: 1px solid red;
+    width: 100%;
+    height: 100vh;
+}
+
+.hero {
+    background: fixed no-repeat 50% 50%;
+    background-size: cover;
+    background-image: url('/assets/img/intro-bg.jpg');
+    background-position: center center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &:before {
+        content: '';
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #000000;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #303030, #303030);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #303030, #303030);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        opacity: 0.5;
+        z-index: 0;
+    }
+
+    &__info{
+        width: 90%;
+        margin: 0 auto;
+        z-index: 1;
+        text-align: center;
+        color: v.$white;
+        font-size: 1.8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        @include m.desktop { 
+            font-size: 3rem;
+         }
+    }
+
+    &__job{
+        text-transform: uppercase;
+        font-size: 4rem;
+    }
+
+    &__text{
+        color: v.$grisClaro;
+        font-weight: 600;
+    }
+}

@@ -1,0 +1,71 @@
+@use '../abstracts/variables' as v;
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fs-32 {
+    font-size: 3.2rem;
+}
+
+.sectionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.sectionName {
+    display: inline-block;
+    background-color: v.$primary05;
+    color: v.$white;
+    padding: 0.8rem 1rem;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.sectionTitle {
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.text-alignC {
+    text-align: center;
+}
+
+.text-alignL{
+    text-align: left;
+}
+
+.centrar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.m-0{
+    margin: 0;
+}
+
+.mb-2{
+    margin-bottom: 2rem;
+}
+
+.mb-4{
+    margin-bottom: 4rem;
+}
+
+.mb-5{
+    margin-bottom: 5rem;
+}
+
+.separador{
+    padding: 5rem 0;
+}
+
+.blueText{
+    color: v.$primary05;
+    font-weight: 600;
+}

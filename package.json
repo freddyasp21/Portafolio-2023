@@ -1,0 +1,15 @@
+{
+  "name": "portafolio-2023",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "sass": "^1.59.3",
+    "vite": "^4.2.0"
+  }
+}
