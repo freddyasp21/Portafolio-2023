@@ -36,6 +36,10 @@
 
     &__years {
         margin-top: 4rem;
+
+        @include m.desktop {
+            margin-top: 0;
+        }
     }
 
     &__number {
@@ -52,11 +56,16 @@
     &__grid {
         margin-top: 5rem;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
         row-gap: 3rem;
+        font-size: 2.1rem;
 
         @include m.desktop {
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: 1fr;
+            gap: 5rem;
+
             .aboutMe {
                 padding: 5rem 0;
 
@@ -84,6 +93,10 @@
 
                 &__years {
                     margin-top: 4rem;
+
+                    @include m.desktop {
+                        margin-top: 0;
+                    }
                 }
 
                 &__number {
@@ -163,5 +176,11 @@
         &__itemEmail {
             text-decoration: underline;
         }
+    }
+
+    &__links {
+        font-size: 3rem;
+        color: v.$primary05;
+        cursor: pointer;
     }
 }
