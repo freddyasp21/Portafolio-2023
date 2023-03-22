@@ -44,7 +44,7 @@
 
     &__number {
         font-size: 10rem;
-        font-weight: 400;
+        font-weight: 600;
         color: v.$primary05;
     }
 
@@ -176,6 +176,20 @@
 
         &__itemEmail {
             text-decoration: underline;
+            color: v.$black;
+            &:visited{
+                color: v.$black;
+            }
+        }
+    }
+    &__linksContainer {
+        @include m.desktop {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: start;
+            gap: 2rem;
         }
     }
 

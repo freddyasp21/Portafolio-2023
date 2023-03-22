@@ -7,8 +7,7 @@ window.addEventListener("scroll", () => {
         navBar.style.background = 'none';
         navBar.style.height = '5rem';
     } else {
-        navBar.style.background = '#0D6EFD';
-        navBar.style.height = '7rem';
+        navBar.style.background = '#0050f1';
     }
 }, { passive: true })
 

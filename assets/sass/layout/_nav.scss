@@ -30,9 +30,31 @@
 
     &__linkContainer{
         color: v.$white;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
     }
 
     &__link{
         color: v.$white;
     }
+
+    &__menuIcon{
+        @include m.desktop{
+            display: none;
+        }
+    }
+    
+    &__menuIconTheme{
+        @include m.desktop{
+            display: flex;
+        }
+    }
+}
+
+.fa-moon{
+    display: flex;
+    color: v.$white;
 }
