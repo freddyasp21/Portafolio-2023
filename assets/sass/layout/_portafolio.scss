@@ -5,7 +5,7 @@
     width: 100%;
     background-color: #F8F9FA;
     margin-top: 5rem;
-    padding: 8rem 0 3rem 0;
+    padding: 8rem 0;
     display: flex;
     flex-direction: column;
 
@@ -34,6 +34,7 @@
 
         &:focus, &:hover{
             border-bottom: 2px solid v.$primary05;
+            color: v.$primary05;
         }
     }
 
