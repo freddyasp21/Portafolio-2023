@@ -1,0 +1,82 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.certificates{
+    padding: 5rem 0;
+}
+
+.certificate{
+    font-size: 1.8rem;
+    color: grey;
+    line-height: 1.8;
+
+    &::after{
+        content: '';
+        display: block;
+        width: 90%;
+        border-bottom: 1px solid #e1e1e1;
+        margin: 2rem 0 1rem 0;
+    }
+
+    &:last-child::after{
+        border: none;
+    }
+
+    &__title{
+        margin-bottom: 5rem;
+        font-size: 2.8rem;
+        font-weight: 600;
+        color: v.$primary05;
+    }
+
+    &__bar{
+        border-left: 2px solid v.$primary05;
+        padding-left: 2rem;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 3rem;
+    }
+
+    &__column{
+        margin-bottom: 5rem;
+        height: 100%;
+        &:nth-child(2){
+            display: none;
+            @include m.tablet { 
+                display: flex;
+                flex-direction: column;
+             }
+        }
+    }
+
+    &__name{
+        font-size: 2.1rem;
+        color: #000;
+        font-weight: 600;
+    }
+
+    &__date{
+        color: #000;
+        font-weight: 300;
+    }
+
+    &__btn{
+        font-weight: 600;
+        color: v.$primary05;
+    }
+}
+
+.columnContainer{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include m.desktop { 
+        flex-direction: row;
+     }
+    
+}

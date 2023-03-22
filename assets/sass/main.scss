@@ -13,18 +13,19 @@
   'base/base',
   'base/helpers';
 
-// Utilities
-
-@import
-  'utilities/utilities';
-
 // Layout
 
 @import
   'layout/header',
   'layout/nav',
   'layout/aboutMe',
-  'layout/services';
+  'layout/services',
+  'layout/certificates';
+
+// Utilities
+
+@import
+  'utilities/utilities';
 
 // Components
 
