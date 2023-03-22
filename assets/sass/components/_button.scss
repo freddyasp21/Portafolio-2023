@@ -35,6 +35,13 @@
     color: v.$white;
     margin: 0 auto;
     cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 6px;
+    &:hover{
+        background-color: v.$primary05;
+        color: v.$white;
+        border: 2px solid v.$white;
+    }
 }
 
 .progress__btn {

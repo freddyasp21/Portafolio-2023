@@ -32,26 +32,30 @@
         min-width: 25%;
         height: 100%;
 
-        &:focus, &:hover{
+        &:focus,
+        &:hover {
             border-bottom: 2px solid v.$primary05;
             color: v.$primary05;
         }
     }
 
     &__grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, minmax(44rem, 1fr));
-        gap: 2rem;
+        // display: grid;
+        // grid-template-columns: 1fr;
+        // grid-template-rows: repeat(6, minmax(44rem, 1fr));
+        // gap: 2rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 44rem;
 
         @include m.tablet {
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(3, minmax(35rem, 1fr));
+            gap: 5rem;
         }
 
         @include m.desktop {
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(2, minmax(35rem, 1fr));
             gap: 3rem;
         }
     }
@@ -64,34 +68,73 @@
         background-repeat: no-repeat;
         background-position: center right;
 
+
+
         &:nth-child(1) {
             background-image: url(/assets/img/Portafolio__Guitarra.png);
+
+            @include m.tablet {
+                display: flex;
+            }
         }
 
         &:nth-child(2) {
             background-image: url(/assets/img/Portafolio__RealState.png);
+            display: none;
+
+            @include m.tablet {
+                display: flex;
+            }
         }
 
         &:nth-child(3) {
             background-image: url(/assets/img/Portafolio__Podcast.png);
+            display: none;
+
+            @include m.desktop {
+                display: flex;
+            }
         }
 
         &:nth-child(4) {
             background-image: url(/assets/img/Portafolio__BienenRaices.png);
             background-position: top center;
+            display: none;
+
+            @include m.desktop {
+                display: flex;
+            }
         }
 
         &:nth-child(5) {
             background-image: url(/assets/img/Portafolio__Nucleus.png);
             background-position: center center;
+            display: none;
         }
 
         &:nth-child(6) {
             background-image: url(/assets/img/Portafolio__TechPro.png);
             background-position: center center;
+            display: none;
         }
+
     }
 
+    &__show {
+        display: flex;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
 
+        &:hover {
+            background: #000000;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #303030, #303030);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #303030, #303030);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            opacity: 0.5;
+        }
+    }
 
 }
