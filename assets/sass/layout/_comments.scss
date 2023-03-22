@@ -1,0 +1,108 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.comments {
+    padding: 5rem 0;
+    background-color: v.$grisClaro;
+    display: flex;
+    flex-direction: row;
+
+    @include m.desktop { 
+        min-height: 80vh;
+     }
+    &__carrousel {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+        margin: 0 auto;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        &::-webkit-scrollbar {
+            display: none;
+        }  
+    }
+
+    &__slide{
+        padding: 5rem 0;
+        background-color: #fff;
+        border: 2px solid v.$white;
+        border-radius: 16px;
+        box-shadow: 0 30px 30px -25px rgba(#4133B7, .25);
+         &:nth-child(2),&:nth-child(3){
+            display: none;
+        }
+        @include m.desktop { 
+            margin: 0 auto;
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+            justify-content: center;
+            gap: 2rem;
+            flex-shrink: 0;
+         }
+    }
+
+    &__mb-5 {
+        color: #303030;
+        margin-bottom: 5rem;
+    }
+
+    &__arrowsContainer {
+        display: none;
+    }
+
+    &__text {
+        font-size: 2.1rem;
+        color: #303030;
+        line-height: 1.8;
+        max-width: 80%;
+        margin: 0 auto;
+        margin-bottom: 5rem;
+        @include m.desktop { 
+            max-width: 60%;
+         }
+    }
+
+    &__box {
+        width: 50%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        color: #303030;
+    }
+
+    &__pic {
+        display: block;
+        width: 6.5rem;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+
+    &__subname{
+        color: #dee3e4;
+    }
+
+    &__nav{
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 2rem;
+        height: 5rem;
+    }
+
+    &__slideBtn{
+        color: v.$primary05;
+    }
+}
