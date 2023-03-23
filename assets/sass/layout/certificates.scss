@@ -66,6 +66,10 @@
     &__btn{
         font-weight: 600;
         color: v.$primary05;
+
+        &:hover{
+            color: v.$primary;
+        }
     }
 }
 
