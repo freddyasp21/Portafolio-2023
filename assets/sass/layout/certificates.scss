@@ -66,6 +66,7 @@
     &__btn{
         font-weight: 600;
         color: v.$primary05;
+        @include transition;
 
         &:hover{
             color: v.$primary;

@@ -11,9 +11,6 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        // grid-template-columns: 1fr;
-        // grid-template-rows: repeat(6, minmax(210px, 1fr));
-        // gap: 4rem;
 
         @include m.tablet {
             display: grid;
@@ -41,6 +38,10 @@
     border: 2px solid v.$white;
     border-radius: 16px;
     box-shadow: 0 30px 30px -25px rgba(#4133B7, .25);
+    cursor: pointer;
+    @include transition;
+
+    
 
     &:nth-child(2),
     &:nth-child(3),
@@ -56,6 +57,9 @@
 
     @include m.tablet {
         display: flex;
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 
     &__img {
@@ -94,6 +98,7 @@
         justify-content: center;
         cursor: pointer;
         border-radius: 6px;
+        @include transition;
         &:hover {
             background-color: v.$primary04;
         }
@@ -104,6 +109,7 @@
         border-radius: 6px;
         background-color: #303030;
         color: #ffffff;
+        @include transition;
         &:hover {
             background-color: v.$black;
         }

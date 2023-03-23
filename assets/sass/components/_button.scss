@@ -14,6 +14,7 @@
     justify-content: center;
     cursor: pointer;
     border-radius: 6px;
+    @include transition;
 
     &:hover {
         background-color: v.$primary04;
@@ -37,6 +38,7 @@
     cursor: pointer;
     text-transform: uppercase;
     border-radius: 6px;
+    @include transition;
     &:hover{
         background-color: v.$primary05;
         color: v.$white;

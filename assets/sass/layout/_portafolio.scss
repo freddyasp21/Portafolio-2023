@@ -31,7 +31,7 @@
         text-align: center;
         min-width: 25%;
         height: 100%;
-
+        @include transition;
         &:focus,
         &:hover {
             border-bottom: 2px solid v.$primary05;
@@ -127,7 +127,7 @@
         height: 100%;
 
         &:hover {
-            background: #000000;
+            background: #303030;
             /* fallback for old browsers */
             background: -webkit-linear-gradient(to right, #303030, #303030);
             /* Chrome 10-25, Safari 5.1-6 */

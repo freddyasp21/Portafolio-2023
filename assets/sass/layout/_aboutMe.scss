@@ -146,6 +146,7 @@
 
                 &__itemEmail {
                     text-decoration: underline;
+                    @include transition;
                     &:hover{
                         color: v.$primary05;
                     }
@@ -200,5 +201,9 @@
         font-size: 3rem;
         color: v.$primary05;
         cursor: pointer;
+        @include transition;
+        &:hover{
+            color: v.$primary;
+        }
     }
 }

@@ -22,6 +22,10 @@
     }
 }
 
+@mixin transition {
+  transition: all .3s ease;
+}
+
 
 @mixin on-event($self: false) {
   @if $self {
