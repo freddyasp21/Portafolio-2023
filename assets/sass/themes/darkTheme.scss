@@ -1,0 +1,72 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+
+.darkTheme {
+    background-color: v.$black;
+    color: v.$white;
+
+    .aboutMe {
+        color: v.$white;
+    }
+
+    .aboutMe__experience {
+        color: v.$primary05;
+    }
+
+    .aboutMe__number {
+        color: v.$white;
+    }
+
+    .aboutMe__itemSub {
+        color: v.$white;
+    }
+
+    .aboutMe__links:hover {
+        color: v.$white;
+    }
+
+    .services {
+        background-color: v.$grisClaro;
+    }
+
+    .services .tarjeta {
+        background-color: v.$black;
+        border-color: v.$black;
+    }
+
+    .services .tarjeta .tarjeta__title {
+        color: v.$white;
+    }
+
+    .tarjeta__btnShare {
+        background-color: v.$white;
+        color: v.$black;
+    }
+
+    .tarjeta__btnShare:hover {
+        background-color: v.$grisClaro;
+    }
+
+    .columnContainer{
+        gap: 2rem;
+    }
+
+    .certificate{
+        color: v.$white;
+
+        &__btn{
+            &:hover{
+                color: v.$white;
+            }
+        }
+    }
+
+    .certificate__name{
+        color: v.$primary05;
+    }
+
+    .certificate__date{
+        color: v.$white;
+    }
+}

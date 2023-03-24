@@ -3,6 +3,7 @@
 
 .aboutMe {
     padding: 5rem 0;
+    color: v.$black;
 
     &__containerMiddle {
         margin-top: 4rem;
@@ -204,6 +205,12 @@
         @include transition;
         &:hover{
             color: v.$primary;
+        }
+    }
+
+    &__span{
+        @include m.tablet {
+            display: none;
         }
     }
 }
